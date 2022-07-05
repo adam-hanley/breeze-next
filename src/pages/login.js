@@ -7,9 +7,11 @@ import GuestLayout from '@/components/Layouts/GuestLayout'
 import Input from '@/components/Input'
 import Label from '@/components/Label'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useAuth } from '@/hooks/auth'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import logo from '../../public/static/images/logos/black-yellow-init.png'
 
 const Login = () => {
     const router = useRouter()
@@ -44,7 +46,7 @@ const Login = () => {
                 logo={
                     <Link href="/">
                         <a>
-                            <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
+                            <Image src={logo} width={100} height={100} className='rounded-full' />
                         </a>
                     </Link>
                 }>
